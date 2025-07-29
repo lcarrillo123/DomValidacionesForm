@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento: le dice al navegador que es HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento HTML, lang="es" indica que el idioma es español -->
+
+<head>
+    <!-- Sección HEAD: contiene información sobre la página que no se ve directamente -->
+    
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres para mostrar tildes y ñ correctamente -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página se vea bien en móviles y tablets -->
+    
+    <title>Visor de Tablas CSV</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlaza el archivo CSS externo que contiene todos los estilos -->
+</head>
+
+<body>
+    <!-- Cuerpo del documento: aquí va todo lo que se ve en la página -->
+    
+    <div class="container">
+        <!-- Contenedor principal que envuelve toda la aplicación -->
+        
+        <!-- SECCIÓN DE ENCABEZADO -->
+        <div class="header">
+            <!-- División para el encabezado con título y descripción -->
+            
+            <h1>📊 Visor de Tablas CSV</h1>
+            <!-- Título principal de nivel 1 con emoji -->
+            
+            <p>Carga archivos CSV desde tu computadora o desde una URL</p>
+            <!-- Párrafo con descripción de qué hace la aplicación -->
+        </div>
+
+        <!-- SECCIÓN DE CONTROLES -->
+        <div class="controls">
+            <!-- División que contiene todos los botones e inputs -->
+            
+            <!-- OPCIÓN 1: CARGAR ARCHIVO LOCAL -->
+            <div class="control-group">
+                <!-- Grupo de controles relacionados (input de archivo) -->
+                
+                <label for="fileInput">📁 Cargar archivo CSV desde tu computadora:</label>
+                <!-- Etiqueta que describe qué hace el input siguiente -->
+                <!-- "for" conecta esta etiqueta con el input que tiene id="fileInput" -->
+                
+                <input type="file" id="fileInput" class="file-input" accept=".csv" />
+                <!-- Input para seleccionar archivos -->
+                <!-- type="file": permite seleccionar archivos -->
+                <!-- id="fileInput": identificador único para JavaScript -->
+                <!-- class="file-input": clase CSS para darle estilo -->
+                <!-- accept=".csv": solo permite archivos .csv -->
+            </div>
+
+            <!-- OPCIÓN 2: CARGAR DESDE URL -->
+            <div class="control-group">
+                <!-- Segundo grupo de controles (input de URL y botón) -->
+                
+                <label for="urlInput">🌐 O ingresa la URL de un archivo CSV:</label>
+                <!-- Etiqueta para el input de URL -->
+                
+                <input type="text" id="urlInput" class="url-input" placeholder="https://ejemplo.com/archivo.csv" />
+                <!-- Input de texto para escribir URLs -->
+                <!-- type="text": campo de texto normal -->
+                <!-- placeholder: texto que aparece cuando está vacío -->
+                
+                <br><br>
+                <!-- Dos saltos de línea para separar elementos -->
+                
+                <button id="loadUrlBtn" class="btn btn-secondary">Cargar desde URL</button>
+                <!-- Botón para cargar archivo desde la URL ingresada -->
+                <!-- id="loadUrlBtn": identificador para JavaScript -->
+                <!-- class="btn btn-secondary": clases CSS para el estilo -->
+            </div>
+
+            <!-- BOTONES ADICIONALES -->
+            <div class="control-group">
+                <!-- Tercer grupo con botón de limpiar -->
+                
+                <button id="clearBtn" class="btn">🗑️ Limpiar tabla</button>
+                <!-- Botón para borrar la tabla y empezar de nuevo -->
+            </div>
+
+            <!-- BOTONES PARA GRÁFICOS -->
+            <div class="control-group" id="chartButtons" style="display: none;">
+                <!-- Grupo de botones para crear gráficos (inicialmente oculto) -->
+                <!-- style="display: none;" hace que esté invisible hasta que se cargue un CSV -->
+                
+                <label>📊 Crear gráficos con los datos:</label>
+                <!-- Etiqueta que explica qué hacen estos botones -->
+                
+                <button id="pieChartBtn" class="btn btn-chart">🍰 Gráfico de Torta</button>
+                <!-- Botón para crear gráfico de torta -->
+                
+                <button id="lineChartBtn" class="btn btn-chart">📈 Gráfico de Líneas</button>
+                <!-- Botón para crear gráfico de líneas -->
+                
+                <button id="barChartBtn" class="btn btn-chart">📊 Gráfico de Barras</button>
+                <!-- Botón para crear gráfico de barras -->
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE LA TABLA -->
+        <div class="table-container">
+            <!-- Contenedor donde aparecerá la tabla generada -->
+            
+            <div id="statusMessage" class="status-message">
+                <!-- División para mostrar mensajes al usuario -->
+                
+                👆 Selecciona un archivo CSV o ingresa una URL para comenzar
+                <!-- Mensaje inicial que ve el usuario -->
+            </div>
+            
+            <div id="tableContainer"></div>
+            <!-- Contenedor vacío donde JavaScript insertará la tabla -->
+            <!-- Inicialmente está vacío, se llena dinámicamente -->
+        </div>
+
+        <!-- SECCIÓN DE GRÁFICOS -->
+        <div class="chart-container" id="chartContainer" style="display: none;">
+            <!-- Contenedor para mostrar los gráficos -->
+            <!-- Inicialmente oculto hasta que se cree un gráfico -->
+            
+            <h3>📊 Gráfico Generado</h3>
+            <!-- Título para la sección de gráficos -->
+            
+            <canvas id="myChart" width="400" height="200"></canvas>
+            <!-- Canvas es el elemento donde Chart.js dibuja los gráficos -->
+            <!-- width y height definen el tamaño del área de dibujo -->
+        </div>
+    </div>
+
+    <!-- SCRIPTS DE JAVASCRIPT -->
+    
+    <!-- Librería Papa Parse desde CDN (Content Delivery Network) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <!-- Esta librería nos ayuda a procesar archivos CSV de forma fácil -->
+    
+    <!-- Librería Chart.js para crear gráficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Esta librería nos permite crear gráficos de torta, líneas y barras -->
+    
+    <!-- Nuestro archivo JavaScript personalizado -->
+    <script src="../CargaDeArchivos/script1.js"></script>
+    <!-- Aquí estará toda la lógica de nuestra aplicación -->
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario Validado</title>
+  <link rel="stylesheet" href="../Dom/estilos.css" />
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ej: Juan"/>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" placeholder="Ej: Pérez"/>
+
+    <label for="correo">Correo Electrónico:</label>
+    <input type="text" id="correo" placeholder="Ej: ejemplo@correo.com"/>
+
+    <label for="telefono">Teléfono Fijo:</label>
+    <input type="text" id="telefono" placeholder="Ej: 1234567"/>
+
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" placeholder="Ej: 3001234567"/>
+
+    <button type="button" id="enviar">Enviar</button>
+  </form>
+
+  <div class="progreso">
+    <div id="barraProgreso"></div>
+    <span id="porcentajeTexto">0%</span>
+  </div>
+
+  <!-- Modal de error -->
+  <div id="modalError" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal" class="cerrar">&times;</span>
+      <p id="mensajeError"></p>
+    </div>
+  </div>
+
+  <script src="../Dom/scriptConArray.js"></script>
+</body>
+</html>

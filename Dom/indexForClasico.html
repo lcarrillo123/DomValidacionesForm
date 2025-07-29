@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario Validado</title>
+  <link rel="stylesheet" href="../Dom/indexForClasico.html" />
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+
+  <form id="formulario">
+    <!-- Campos de entrada -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" disabled placeholder="Ej. Juan" />
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" disabled placeholder="Ej. Pérez" />
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" disabled placeholder="ejemplo@correo.com" />
+
+    <label for="telefono">Teléfono fijo:</label>
+    <input type="text" id="telefono" disabled placeholder="1234567" />
+
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" disabled placeholder="3216549870" />
+
+    <!-- Botón de enviar -->
+    <button type="button" id="enviar" disabled>Enviar</button>
+
+    <!-- Barra de progreso -->
+    <div class="progreso">
+      <div id="barraProgreso"></div>
+      <span id="porcentajeTexto">0%</span>
+    </div>
+  </form>
+
+  <!-- Modal para errores -->
+  <div id="modalError" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal">&times;</span>
+      <p id="mensajeError"></p>
+    </div>
+  </div>
+
+  <!-- Script JS -->
+  <script src="../Dom/scriptForClasico.js"></script>
+</body>
+</html>

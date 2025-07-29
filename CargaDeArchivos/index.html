@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga De Archivo CSV Tabla Dinámica</title>
+    <style>
+        table{
+            width: 50%;/* la tabla va ocupar el 50% del ancho del cotenedor*/
+            border-collapse: colapse;/* Colapsa los bordes de las celdas para que se vea como una sola linea*/
+            margin: 20px 0;/* agrega 20px de espacio arriba y abajo de la tabla define un marge superior e inferior*/
+        
+        }
+        th, td{
+          border: 1px solid gray; /* Añade un color gris en el bide de la celda*/
+          padding: 8px; /*Espacio interno del contenido*/ 
+          text-align: left;/*alinea el texto a la izquierda*/
+        }
+        th{
+            background-color: rgb(96, 88, 199);/* color de fondo para las celda del encabezado*/
+
+        }
+        /**/
+
+    </style>
+</head>
+<body>
+    <h1>
+        Tabla De Usuarios
+    </h1>
+    <table id="tablaUsuarios">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas las vamos a insertar dinamicamente desde el js-->
+        </tbody>
+    </table>
+    <script>
+        
+    </script>
+</body>
+</html>

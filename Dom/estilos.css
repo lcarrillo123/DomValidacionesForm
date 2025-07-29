@@ -1,0 +1,134 @@
+/* Estilo general del cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Tipo de letra clara y fácil de leer */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  padding: 20px; /* Espacio interno alrededor del contenido */
+  text-align: center; /* Centra el contenido dentro del body */
+}
+
+/* Título del formulario */
+h1 {
+  text-align: center;        /* Centra el texto horizontalmente */
+  margin-top: 20px;          /* Espaciado superior opcional */
+  color: #004080;            /* Color azul oscuro opcional */
+  font-size: 2em;            /* Tamaño de fuente ajustable */
+}
+
+
+/* Estilo del formulario */
+form {
+  background-color: white; /* Fondo blanco para destacar el formulario */
+  padding: 20px; /* Espacio interno del formulario */
+  border-radius: 10px; /* Bordes redondeados */
+  max-width: 400px; /* Ancho máximo */
+  margin: auto; /* Centra el formulario horizontalmente */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para etiquetas */
+label {
+  display: block; /* Cada etiqueta en su propia línea */
+  margin-top: 15px; /* Espacio encima de cada etiqueta */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los campos de entrada */
+input {
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  padding: 8px; /* Espacio interno del campo */
+  margin-top: 5px; /* Pequeño espacio sobre el campo */
+  border: 2px solid #ccc; /* Borde gris claro inicialmente */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+/* Campo válido: verde y fondo suave */
+input.valido {
+  border-color: green; /* Borde verde */
+  background-color: #e0ffe0; /* Verde claro difuminado */
+}
+
+/* Campo inválido: rojo y fondo suave */
+input.invalido {
+  border-color: red; /* Borde rojo */
+  background-color: #ffe0e0; /* Rojo claro difuminado */
+}
+
+/* Botón de enviar */
+button#enviar {
+  margin-top: 20px; /* Espacio arriba del botón */
+  padding: 10px 20px; /* Tamaño del botón */
+  font-size: 16px; /* Tamaño del texto */
+  background-color: #28a745; /* Verde Bootstrap */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano */
+}
+
+/* Deshabilitado: opacidad reducida y sin cursor */
+button:disabled {
+  opacity: 0.5; /* Se ve apagado */
+  cursor: not-allowed; /* No interactivo */
+}
+
+/* Barra de progreso contenedor */
+.progreso {
+  margin-top: 20px; /* Espacio superior */
+  height: 25px; /* Alto de la barra */
+  width: 100%; /* Ancho completo */
+  background-color: #ddd; /* Fondo gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  position: relative; /* Posición relativa para el texto */
+  overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+/* Barra de progreso que se llena */
+#barraProgreso {
+  height: 100%; /* Alto completo del contenedor */
+  width: 0%; /* Empieza vacía */
+  background-color: #007bff; /* Azul Bootstrap */
+  transition: width 0.3s; /* Suaviza la animación */
+}
+
+/* Texto que muestra el porcentaje */
+#porcentajeTexto {
+  position: absolute; /* Posición absoluta dentro del contenedor */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centrado horizontal */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Negrita */
+  line-height: 25px; /* Alineado verticalmente */
+}
+
+/* Estilo general del modal (fondo oscuro) */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo en pantalla */
+  z-index: 1; /* Encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ocupa toda la pantalla */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro transparente */
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background-color: white; /* Fondo blanco */
+  margin: 15% auto; /* Centrado vertical y horizontal */
+  padding: 20px; /* Espacio interno */
+  border-radius: 10px; /* Bordes redondeados */
+  max-width: 300px; /* Ancho máximo */
+  text-align: center; /* Centrado del texto */
+}
+
+/* Botón para cerrar el modal (la "X") */
+#cerrarModal {
+  float: right; /* A la derecha */
+  font-size: 20px; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  color: red; /* Color rojo */
+  cursor: pointer; /* Mano al pasar */
+}

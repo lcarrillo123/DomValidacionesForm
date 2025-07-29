@@ -1,0 +1,61 @@
+<!-- formulario.html -->
+
+<!-- Este archivo HTML muestra un formulario para ingresar datos personales con validaciones -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Validado</title>
+  <!-- Enlace al archivo de estilos externo -->
+  <link rel="stylesheet" href="../Dom/estilos.css">
+</head>
+<body>
+  <!-- Título del formulario -->
+  <h2>Formulario de Validación</h2>
+
+  <!-- Contenedor del formulario -->
+  <form id="formulario">
+    <!-- Campo para ingresar el nombre -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" disabled>
+
+    <!-- Campo para ingresar el apellido -->
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" disabled>
+
+    <!-- Campo para ingresar el correo -->
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" disabled>
+
+    <!-- Campo para ingresar el teléfono -->
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" disabled>
+
+    <!-- Campo para ingresar el celular -->
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" disabled>
+
+    <!-- Botón para enviar el formulario -->
+    <button type="button" id="enviar" disabled>Enviar</button>
+  </form>
+
+  <!-- Barra de progreso que se muestra al enviar -->
+  <div id="barraProgresoContainer">
+    <div id="barraProgreso">
+      <span id="porcentajeTexto">0%</span>
+    </div>
+  </div>
+
+  <!-- Modal de error que aparece cuando hay campos inválidos -->
+  <div id="modalError">
+    <div class="modal-contenido">
+      <span id="cerrarModal">&times;</span>
+      <p id="mensajeError"></p>
+    </div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript externo -->
+  <script src="../Dom/scriptSinArray.js"></script>
+</body>
+</html>
